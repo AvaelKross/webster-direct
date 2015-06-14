@@ -9,14 +9,17 @@
     <link rel="icon" href="favicon.ico">
 
     <title>Webster</title>
-
-    
-    <link href="./css/style.css" rel="stylesheet">      
-
+   
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="js/magic.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/circle-progress.js"></script>
+    <link href="./css/style.css" rel="stylesheet">    
     
 </head>
 
-<body>
+<body>   
     <div class="header">
         <div class="container">
             <div class="top-header">
@@ -25,12 +28,12 @@
                 </div>
                 <div class="menu-wrap">
                     <ul class="menu">
-                        <li><a>РЕЗУЛЬТАТЫ</a></li>
-                        <li><a>11 ПРАВИЛ</a></li>
-                        <li><a>КЛИЕНТЫ</a></li>
-                        <li><a>ВОПРОСЫ</a></li>
-                        <li><a>ПРОЦЕСС</a></li>
-                        <li><a>ЧТО ЕЩЕ</a></li>
+                        <li><a href="#result" onclick="allEventsStart()">РЕЗУЛЬТАТЫ</a></li>
+                        <li><a href="#rules">11 ПРАВИЛ</a></li>
+                        <li><a href="#clients">КЛИЕНТЫ</a></li>
+                        <li><a href="#questions">ВОПРОСЫ</a></li>
+                        <li><a href="#process">ПРОЦЕСС</a></li>
+                        <li><a href="#useful">ЧТО ЕЩЕ</a></li>
                     </ul>
                 </div>
             </div>
@@ -38,7 +41,7 @@
                 <h3>СОЗДАНИЕ И ВЕДЕНИЕ КАМПАНИЙ В ЯНДЕКС.ДИРЕКТ</h3>
                 <h1>увеличиваем поток заявок<br/>
                     на 247% за 5 дней</h1>
-                <a class="top-btn">ПОЛУЧИТЬ КОММЕРЧЕСКОЕ ПРЕДЛОЖЕНИЕ</a>
+                <a href="#offer" class="top-btn">ПОЛУЧИТЬ КОММЕРЧЕСКОЕ ПРЕДЛОЖЕНИЕ</a>
             </div>
         </div>
     </div>
@@ -61,43 +64,469 @@
             </div>
         </div>
     </div>
-    <div class="results">
-        <div class="container">
+    <div id="result" class="results">
+        <div class="container">            
             <h2>Результаты 2015 года</h2>
-            <div class="results-wrap">
-                <div class="result-content sign">
-                    <h3>Business ralations</h3>
-                    <p>тренинги личностного роста</p>
-                    <p>www.context.br-ekb.ru</p>
+            <div class="slide active" style="display:block;">
+                <div class="results-wrap">
+                    <div class="result-content sign">
+                        <h3>Business ralations</h3>
+                        <p>тренинги личностного роста</p>
+                        <p><span>www.context.br-ekb.ru</span></p>
+                    </div>
+                    <div class="result-content brif">
+                        <h4>Бриф:</h4>
+                        <p>Настроить рекламную кампа-<br/>нию в Екатеринбурге</p>
+                        <br/>
+                        <h4>Задача:</h4>
+                        <p>Сделать максимально эффек-<br/>ивную рекламную кампанию</p>
+                    </div>
+                    <div class="result-content final">
+                        <h4>Решение:</h4>
+                        <p>Создали 15 объявлений по<br/> каждый запрос, запустили<br/> рекламу в соц. сетях.</p>
+                    </div>
                 </div>
-                <div class="result-content brif">
-                    <h4>Бриф:</h4>
-                    <p>Настроить рекламную кампа-<br/>нию в Екатеринбурге</p>
-                    <br/>
-                    <h4>Задача:</h4>
-                    <p>Сделать максимально эффек-<br/>ивную рекламную кампанию</p>
-                </div>
-                <div class="result-content final">
-                    <h4>Решение:</h4>
-                    <p>Создали 15 объявлений по<br/> каждый запрос, запустили<br/> рекламу в соц. сетях.</p>
+                <div class="info-wrap">
+                    <div class="result-info">
+                        <h3>заявок в месяц</h3>
+                        <div class="orders">                            
+                            <div class="old-orders">0</div>
+                            <div class="new-orders">0</div>                        
+                            <div class="animated-circle">                              
+                            </div>
+                        </div>
+                        <div class="was">БЫЛО</div>
+                        <div class="become">СТАЛО</div>
+                    </div>
+                    <div class="result-info">
+                        <h3>цена привлеченного клиента</h3>
+                        <div class="prices">
+                            <div class="old-price">0</div>
+                            
+                            <div class="animated-figures">
+                                <div class="new-price">3270</div>
+                                <div class="filled-figure"></div>
+                            </div>
+                        </div>  
+                        <div class="was">БЫЛО</div>
+                        <div class="become">СТАЛО</div>
+                    </div>
                 </div>
             </div>
-            <div class="info-wrap">
-                <div class="result-info">
-                    <h3>заявок в месяц</h3>
-                    <img src="img/orders.png">
-                    <div class="was">БЫЛО</div>
-                    <div class="become">СТАЛО</div>
+            <div class="slide">
+                <div class="results-wrap">
+                    <div class="result-content sign">
+                        <h3>Business ralations2</h3>
+                        <p>тренинги личностного роста</p>
+                        <p>www.context.br-ekb.ru</p>
+                    </div>
+                    <div class="result-content brif">
+                        <h4>Бриф:</h4>
+                        <p>Настроить рекламную кампа-<br/>нию в Екатеринбурге</p>
+                        <br/>
+                        <h4>Задача:</h4>
+                        <p>Сделать максимально эффек-<br/>ивную рекламную кампанию</p>
+                    </div>
+                    <div class="result-content final">
+                        <h4>Решение:</h4>
+                        <p>Создали 15 объявлений по<br/> каждый запрос, запустили<br/> рекламу в соц. сетях.</p>
+                    </div>
                 </div>
-                <div class="result-info">
-                    <h3>цена привлеченного клиента</h3>
-                    <img src="img/prices.png">  
-                    <div class="was">БЫЛО</div>
-                    <div class="become">СТАЛО</div>
+                <div class="info-wrap">
+                    <div class="result-info">
+                        <h3>заявок в месяц</h3>
+                        <div class="orders">
+                            <div class="old-orders">0</div>
+                            <div class="new-orders">0</div>
+                        </div>
+                        <div class="was">БЫЛО</div>
+                        <div class="become">СТАЛО</div>
+                    </div>
+                    <div class="result-info">
+                        <h3>цена привлеченного клиента</h3>
+                        <div class="prices">
+                            <div class="old-price">0</div>
+                            <div class="new-price">0</div>
+                        </div>  
+                        <div class="was">БЫЛО</div>
+                        <div class="become">СТАЛО</div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="results-wrap">
+                    <div class="result-content sign">
+                        <h3>Business ralations3</h3>
+                        <p>тренинги личностного роста</p>
+                        <p>www.context.br-ekb.ru</p>
+                    </div>
+                    <div class="result-content brif">
+                        <h4>Бриф:</h4>
+                        <p>Настроить рекламную кампа-<br/>нию в Екатеринбурге</p>
+                        <br/>
+                        <h4>Задача:</h4>
+                        <p>Сделать максимально эффек-<br/>ивную рекламную кампанию</p>
+                    </div>
+                    <div class="result-content final">
+                        <h4>Решение:</h4>
+                        <p>Создали 15 объявлений по<br/> каждый запрос, запустили<br/> рекламу в соц. сетях.</p>
+                    </div>
+                </div>
+                <div class="info-wrap">
+                    <div class="result-info">
+                        <h3>заявок в месяц</h3>
+                        <div class="orders">
+                            <div class="old-orders">0</div>
+                            <div class="new-orders">0</div>
+                        </div>
+                        <div class="was">БЫЛО</div>
+                        <div class="become">СТАЛО</div>
+                    </div>
+                    <div class="result-info">
+                        <h3>цена привлеченного клиента</h3>
+                        <div class="prices">
+                            <div class="old-price">0</div>
+                            <div class="new-price">0</div>
+                        </div>  
+                        <div class="was">БЫЛО</div>
+                        <div class="become">СТАЛО</div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="results-wrap">
+                    <div class="result-content sign">
+                        <h3>Business ralations4</h3>
+                        <p>тренинги личностного роста</p>
+                        <p>www.context.br-ekb.ru</p>
+                    </div>
+                    <div class="result-content brif">
+                        <h4>Бриф:</h4>
+                        <p>Настроить рекламную кампа-<br/>нию в Екатеринбурге</p>
+                        <br/>
+                        <h4>Задача:</h4>
+                        <p>Сделать максимально эффек-<br/>ивную рекламную кампанию</p>
+                    </div>
+                    <div class="result-content final">
+                        <h4>Решение:</h4>
+                        <p>Создали 15 объявлений по<br/> каждый запрос, запустили<br/> рекламу в соц. сетях.</p>
+                    </div>
+                </div>
+                <div class="info-wrap">
+                    <div class="result-info">
+                        <h3>заявок в месяц</h3>
+                        <div class="orders">
+                            <div class="old-orders">0</div>
+                            <div class="new-orders">0</div>
+                        </div>
+                        <div class="was">БЫЛО</div>
+                        <div class="become">СТАЛО</div>
+                    </div>
+                    <div class="result-info">
+                        <h3>цена привлеченного клиента</h3>
+                        <div class="prices">
+                            <div class="old-price">0</div>
+                            <div class="new-price">0</div>
+                        </div>  
+                        <div class="was">БЫЛО</div>
+                        <div class="become">СТАЛО</div>
+                    </div>
+                </div>
+            </div>
+            <a class="left-arrow"></a>
+            <a class="right-arrow"></a>
+        </div>        
+    </div>
+    <div id="rules" class="rules">        
+        <div class="container">
+            <h2>11 важнейших правил прибыльного Директа</h2>
+            <h3>соблюдая их вы окупите рекламу в 64 раза</h3>             
+            <div class="point pos1">                
+                <h3>установка метрики
+                    на сайт</h3>
+                <div class="hidden">
+                    Не следует, однако забывать, что начало повседневной работы по формированию позиции способствует подготовки и реализации форм развития. С другой стороны рамки и место обучения кадров требуют определения и уточнения соответствующий условий активизации. 
+                </div>
+            </div>
+            <div class="point pos2">                
+                <h3>Раздельные
+                    кампании</h3>
+                <div class="hidden">
+                    Не следует, однако забывать, что начало повседневной работы по формированию позиции способствует подготовки и реализации форм развития. С другой стороны рамки и место обучения кадров требуют определения и уточнения соответствующий условий активизации. 
+                </div>
+            </div>
+            <div class="point pos3">                
+                <h3>ключевой<br/>
+                    запрос</h3>
+                <div class="hidden">
+                    Не следует, однако забывать, что начало повседневной работы по формированию позиции способствует подготовки и реализации форм развития. С другой стороны рамки и место обучения кадров требуют определения и уточнения соответствующий условий активизации. 
+                </div>
+            </div>
+            <div class="point pos4">                
+                <h3>Текст<br>
+                    объявления</h3>
+                <div class="hidden">
+                    Не следует, однако забывать, что начало повседневной работы по формированию позиции способствует подготовки и реализации форм развития. С другой стороны рамки и место обучения кадров требуют определения и уточнения соответствующий условий активизации. 
+                </div>
+            </div>
+            <div class="point pos5">                
+                <h3>релевантный
+                    запрос</h3>
+                <div class="hidden">
+                    Не следует, однако забывать, что начало повседневной работы по формированию позиции способствует подготовки и реализации форм развития. С другой стороны рамки и место обучения кадров требуют определения и уточнения соответствующий условий активизации. 
+                </div>
+            </div>
+            <div class="point pos6">                
+                <h3>минус-слова</h3>
+                <div class="hidden">
+                    Не следует, однако забывать, что начало повседневной работы по формированию позиции способствует подготовки и реализации форм развития. С другой стороны рамки и место обучения кадров требуют определения и уточнения соответствующий условий активизации. 
+                </div>
+            </div>
+            <div class="point pos7">                
+                <h3>UTM-метки</h3>
+                <div class="hidden">
+                    Не следует, однако забывать, что начало повседневной работы по формированию позиции способствует подготовки и реализации форм развития. С другой стороны рамки и место обучения кадров требуют определения и уточнения соответствующий условий активизации. 
+                </div>
+            </div>
+            <div class="point pos8">                
+                <h3>Изображения</h3>
+                <div class="hidden">
+                    Не следует, однако забывать, что начало повседневной работы по формированию позиции способствует подготовки и реализации форм развития. С другой стороны рамки и место обучения кадров требуют определения и уточнения соответствующий условий активизации. 
+                </div>
+            </div>
+            <div class="point pos9">               
+                <h3>группы<br>
+                    объявлений</h3>
+                <div class="hidden">
+                    Не следует, однако забывать, что начало повседневной работы по формированию позиции способствует подготовки и реализации форм развития. С другой стороны рамки и место обучения кадров требуют определения и уточнения соответствующий условий активизации. 
+                </div>
+            </div>
+            <div class="point pos10">                
+                <h3>аналитика</h3>
+                <div class="hidden">
+                    Не следует, однако забывать, что начало повседневной работы по формированию позиции способствует подготовки и реализации форм развития. С другой стороны рамки и место обучения кадров требуют определения и уточнения соответствующий условий активизации. 
+                </div>
+            </div>
+            <div class="point pos11">                
+                <h3>Быстрые
+                    ссылки</h3>
+                <div class="hidden">
+                    Не следует, однако забывать, что начало повседневной работы по формированию позиции способствует подготовки и реализации форм развития. С другой стороны рамки и место обучения кадров требуют определения и уточнения соответствующий условий активизации. 
+                </div>
+            </div>
+        </div>
+        <div class="break"></div>
+    </div>
+    <div id="clients" class="partners">
+        <div class="container">
+            <h2>логотипы наших клиентов</h2>
+            <div class="switchers-wrap">                    
+                <div class="column one">
+                    <div class="switcher tab1 active">промышленность</div>
+                    <div class="switcher tab2 ">товары</div>
+                    <div class="switcher tab3">логистика</div>
+                </div>
+                <div class="column two">
+                    <div class="switcher tab4">оптовая продажа</div>
+                    <div class="switcher tab5">Услуги</div>
+                    <div class="switcher tab6">сервис</div>
+                </div>
+                <div class="column three">
+                    <div class="switcher tab7">недвижимость</div>
+                    <div class="switcher tab8">тренинги</div>
+                    <div class="switcher tab9">дом и офис</div>
+                </div>
+                <div class="column four">
+                    <div class="switcher tab10">юриспруденция</div>
+                    <div class="switcher tab11">одежда</div>
+                </div>                                                                       
+            </div>
+            <div class="brands-wrap">
+                <div class="brands tab1 active">
+                    <img src="img/brands.jpg">
+                </div>
+                <div class="brands tab2">
+                    <h4>Вкладка 2</h4>
+                </div> 
+                <div class="brands tab3">
+                    <h4>Вкладка 3</h4>
+                </div>
+                <div class="brands tab4">
+                    <h4>Вкладка 4</h4>
                 </div>
             </div>
         </div>
     </div>
-
+    <div id="questions" class="questions">
+        <div class="container">
+            <h2>нас часто спрашивают...</h2>
+            <div class="question qst1">
+                Сколько стоят<br>
+                ваши услуги?
+                <div class="inner-window">
+                    Не следует, однако забывать, что начало повседнев-<br>ной работы по формированию позиции способствует подготовки и реализации форм развития. С другой стороны рамки и место обучения кадров требуют определения и уточнения соответствующий условий активизации.                    
+                </div>
+            </div>
+            <div class="question qst2">
+                Чем вы принципиально<br>
+                отличаетесь от конкурентов?
+                <div class="inner-window">
+                    Не следует, однако забывать, что начало повседнев-<br>ной работы по формированию позиции способствует подготовки и реализации форм развития. С другой стороны рамки и место обучения кадров требуют определения и уточнения соответствующий условий активизации. 
+                </div>
+            </div>
+            <div class="question qst3">
+                Входит ли в цену настройки<br>
+                ведение кампании?
+                <div class="inner-window">
+                    Не следует, однако забывать, что начало повседнев-<br>ной работы по формированию позиции способствует подготовки и реализации форм развития. С другой стороны рамки и место обучения кадров требуют определения и уточнения соответствующий условий активизации. 
+                </div>
+            </div>
+            <div class="question qst4">
+                Вы соблюдаете сроки?
+                <div class="inner-window">
+                    Не следует, однако забывать, что начало повседнев-<br>ной работы по формированию позиции способствует подготовки и реализации форм развития. С другой стороны рамки и место обучения кадров требуют определения и уточнения соответствующий условий активизации. 
+                </div>
+            </div>
+            <div class="question qst5">
+                У меня уже есть рекламная<br>
+                кампания, но она не эффективна.<br>
+                Чем вы можете мне помочь?
+                <div class="inner-window">
+                    Не следует, однако забывать, что начало повседнев-<br>ной работы по формированию позиции способствует подготовки и реализации форм развития. С другой стороны рамки и место обучения кадров требуют определения и уточнения соответствующий условий активизации. 
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="process" class="working-steps">
+        <div class="container">
+            <h2>Как строится процесс работы</h2>
+            <div class="steps-wrap">
+                <div class="step step1">
+                    <div class="step-img step1"></div>
+                    <h3>Вы заполняете бриф</h3>
+                    <p>Бриф состоит из 12 вопросов, необходимых для детальной проработки и анализа ваней ниши.</p>
+                </div>
+                <div class="step step2">
+                    <div class="step-img step2"></div>
+                    <h3>Мы собираем для вас<br/>
+                        ключевые слова</h3>
+                    <p>Мы собираем ключевые слова и делим их на группы, в зависимости от частотности и релевантности вашим товарам или услугам. Утверждаем окончательный список ключевых слов, по которым будем вас рекламировать.</p>
+                </div>
+                <div class="step step3">
+                    <div class="step-img step3"></div>
+                    <h3>пишем объявления под каждое<br/>
+                        ключевое слово</h3>
+                    <p>Пишем уникальные, релевант-
+                        ные запросам заголовки и
+                        текст объявлений.  </p>
+                </div>
+                <div class="step step4">
+                    <div class="step-img step4"></div>
+                    <h3>Запускаем кампа-<br/>
+                        нию, анализируем 
+                        и улучшаем</h3>
+                    <p>На этом этапе мы выделяем 
+                        эффективные и неэффективные 
+                        ключевые запросы, меняем
+                        стратегию и элементы кампа-
+                        нии при необходимости.</p>
+                </div>
+            </div>
+            <a href="#offer" class="blue-btn">Получить коммерческое предложение</a>
+        </div>
+    </div>
+    <div id="useful" class="useful">
+        <div class="container">
+            <h2>Чем еще мы можем быть вам полезны?</h2>
+            <div class="service-block">
+                <h3>Настройка Smm на vk.com</h3>
+                <ol>
+                    <li>Определим несколько целевых аудиторий для вашего бизнеса.</li>
+                    <li>Соберем списки пользователей под каждую ЦА.</li>
+                    <li>Покажем им узкосегментированную рекламу.</li>
+                </ol>                
+            </div>
+            <div class="service-block">
+                <h3>Создание Landing Page</h3>
+                <ol>
+                    <li>"Упакуем" ваше предложение. </li>
+                    <li>Создадим посадочную страницу, максимально интересную для Вашей ЦА</li>                    
+                </ol>
+            </div>
+            <div class="service-block">
+                <h3>Аудит рекламной площадки</h3>
+                <ol>
+                    <li>Проведём анализ текущей ситуации на основании данных систем аналитики</li>
+                    <li>Дадим рекомендации по увеличению конверсии площадки</li>                    
+                </ol>
+            </div>
+            <div class="service-block">
+                <h3>Настройка кроссретаргетинга</h3>
+                <p>Ни один посетитель вашего сайта не уйдёт с пустыми руками, покажем рекламу на VK.COM посетителям вашего сайта, пришедшим с других ресурсов</p>
+            </div>
+        </div>
+    </div>
+    <div  id="offer" class="offer">
+        <div class="container">
+            <h2>Получите коммерческое предложение<br/>
+                для вашей кампании</h2>
+            <div class="form-wrap">
+                <div class="left-col">
+                    <h3>Что вы получите:</h3>
+                    <ol>
+                        <li>РАСЧЕТ СМЕТЫ НА РАЗРАБОТКУ<br/>
+                            В 4-Х ВАРИАНТАХ</li>
+                        <li>СРОКИ РАЗРАБОТКИ</li>
+                        <li>ПОДБОРКА РАБОТ ИЗ НАШЕГО<br/>
+                            ПОРТФОЛИО БЛИЗКИХ К ВАШЕЙ<br/>
+                            СФЕРЕ БИЗНЕСА</li>
+                        <li>ПРОГНОЗ РЕЗУЛЬТАТОВ<br/>
+                            ПО КОЛИЧЕСТВУ ЗАЯВОК</li>
+                    </ol>
+                </div>
+                <div class="right-col">
+                    <form action="process.php">
+                        <div id="name-group" class="form-group">
+                            <label for="username"></label>
+                            <input type="text" id="username" name="username" placeholder="Как вас зовут">
+                        </div>
+                        <div id="phone-group" class="form-group">
+                            <label for="userphone"></label>
+                            <input type="text" id="userphone" name="userphone" placeholder="Телефон">
+                        </div>     
+                        <div id="business-group" class="form-group">
+                            <label for="userbusiness"></label>
+                            <input type="text" id="userbusiness" name="userbusiness" placeholder="Сфера бизнеса">
+                        </div>
+                        <div id="email-group" class="form-group">
+                            <label for="useremail"></label>
+                            <input type="text" id="useremail" name="useremail" placeholder="E-mail">
+                        </div>                        
+                        <input type="submit" value="ПОЛУЧИТЬ">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="logo">
+                <img src="img/logo.png">
+            </div>
+            <div class="company-data">
+                <ul>
+                    <li>ООО «Планета»    ОГРН 1126671018484</li>
+                    <li>ОКПО 16765472    ИНН/КПП 6671405239 / 667101001</li>
+                </ul>                
+            </div>
+            <div class="contacts">
+                <ul>
+                    <li>8-800-123-23-23</li>
+                    <li>(бесплатно по РФ)</li>
+                    <li>webster@webstermg.ru</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
