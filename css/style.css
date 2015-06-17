@@ -19,6 +19,12 @@
     src: url('../fonts/Room Light.otf');
 }
 
+@media screen and (max-width: 1024px) { 
+    .header, .about-us, .results, .rules, .partners , .questions, .working-steps, .useful, .offer, .footer {
+        min-width: 1345px;
+    }
+}
+
 
 * {
     margin: 0;
@@ -78,6 +84,8 @@ a:hover {}
     margin-top: -20px;
     margin-bottom: 5px;
 }
+
+
 
 /*-------------------------- Header Section -------------------------------*/
 
@@ -453,7 +461,7 @@ a.top-btn {
     cursor: pointer;
     background-image: url(../img/sdot.png);
     background-repeat: no-repeat;
-    background-position: 5px 5px;
+    background-position: 5px 5px;  
 }
 
 .point:hover {
@@ -545,13 +553,32 @@ a.top-btn {
 .hidden {
     color: #fff;    
     background-color: #0088f0;   
-    display: none;
+    display: block;
+    min-width: 350px;    
+    opacity: 0;
     padding: 9px;
     position: absolute;  
     top: 50px;
     left: 10px;
     font-size: 13px;
     font-family: RoomLight;   
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+}
+
+.pos9 .hidden {
+    left: -131px;
+}
+
+.pos10 .hidden {
+    left: -202px;
+}
+
+.pos1 .hidden {
+    left: 200px;
+    top: 15px;
+    width: 423px;
 }
 
 .pos1:hover .hidden {
@@ -559,14 +586,28 @@ a.top-btn {
     width: 423px;
     left: 200px;
     top: 15px;
+    opacity: 1;
+    
 }
 
+.pos2 .hidden {    
+    width: 423px;
+    left: -112px;
+    top: -134px;    
+}
 
 .pos2:hover .hidden {
     display: block;
     width: 423px;
     left: -112px;
     top: -134px;
+    opacity: 1;
+}
+
+.pos3 .hidden {    
+    width: 423px;
+    left: 121px;
+    top: 35px;
 }
 
 .pos3:hover .hidden {
@@ -574,6 +615,13 @@ a.top-btn {
     width: 423px;
     left: 121px;
     top: 35px;
+    opacity: 1;
+}
+
+.pos4 .hidden {    
+    width: 423px;
+    left: 140px;
+    top: 15px;    
 }
 
 .pos4:hover .hidden {
@@ -581,6 +629,14 @@ a.top-btn {
     width: 423px;
     left: 140px;
     top: 15px;
+    opacity: 1;
+}
+
+
+.pos5 .hidden {  
+    width: 423px;
+    left: -165px;
+    top: -130px;
 }
 
 .pos5:hover .hidden {
@@ -588,11 +644,23 @@ a.top-btn {
     width: 423px;
     left: -165px;
     top: -130px;
+    opacity: 1;
+}
+
+.pos6 .hidden {
+    width: 356px;   
 }
 
 .pos6:hover .hidden {
     width: 356px;
-    display: block;      
+    display: block;   
+    opacity: 1;
+}
+
+.pos7 .hidden {  
+    width: 423px;
+    left: 42px;
+    top: 30px;   
 }
 
 .pos7:hover .hidden {
@@ -600,6 +668,13 @@ a.top-btn {
     width: 423px;
     left: 42px;
     top: 30px;
+    opacity: 1;
+}
+
+.pos8 .hidden {    
+    width: 423px;
+    left: -306px;
+    top: -114px;    
 }
 
 .pos8:hover .hidden {
@@ -607,13 +682,27 @@ a.top-btn {
     width: 423px;
     left: -306px;
     top: -114px;
+    opacity: 1;
+}
+
+.pos9 .hidden {
+    width: 423px;
+    left: -163px;
+    top: 85px;
 }
 
 .pos9:hover .hidden {
     display: block;
     width: 423px;
-    left: -145px;
-    top: 70px;
+    left: -163px;
+    top: 85px;
+    opacity: 1;
+}
+
+.pos10 .hidden {    
+    width: 423px;
+    left: -515px;
+    top: -50px;    
 }
 
 .pos10:hover .hidden {
@@ -621,6 +710,13 @@ a.top-btn {
     width: 423px;
     left: -515px;
     top: -50px;
+    opacity: 1;
+}
+
+.pos11 .hidden {    
+    width: 423px;
+    left: 180px;
+    top: 25px;   
 }
 
 .pos11:hover .hidden {
@@ -628,12 +724,13 @@ a.top-btn {
     width: 423px;
     left: 180px;
     top: 25px;
+    opacity: 1;
 }
 
 
 
 .point:hover h3 {
-    color: #0088f0;
+    color: #0088f0;   
 }
 
 
@@ -795,12 +892,72 @@ a.top-btn {
 
 .brands-wrap {
     padding-top: 70px;
-    height: 350px;
+    min-height: 350px;
+    overflow: hidden;
 }
 
 .brands-wrap img {
+    float: left;
+    margin-right: 30px;
+    margin-left: 30px;
+    max-width: 369px;
+}
+
+.brands-block {
     display: block;
     margin: 0 auto;
+    overflow: hidden;
+    margin-bottom: 35px;
+}
+
+.tab1 .brands-block {
+    width: 945px;
+    margin: 0 auto;
+}
+
+.tab5 .brands-block.br1 {
+    width: 947px;
+    margin: 0 auto;
+    margin-bottom: 35px;
+}
+
+.tab2 .brands-block.br1 {
+    width: 1030px;
+    margin: 0 auto;
+    margin-bottom: 35px;
+}
+.tab8 .brands-block.br1 {
+    width: 470px;
+    margin: 0 auto;
+    margin-bottom: 35px;
+}
+
+.tab4 .brands-block.br1 {
+    width: 573px;
+}
+
+.tab6 .brands-block.br1 {
+    width: 665px;
+}
+.tab9 .brands-block.br1 {
+    width: 1044px;
+}
+.tab9 .brands-block.br2 {
+    width: 867px;
+}
+
+.tab3 img {
+    float: none !important;
+    margin: 0 auto;
+    display: block;
+}
+
+.tab10 .brands-block {
+    width: 875px;
+}
+
+.tab11 .brands-block {
+    width: 745px;
 }
 
 /* ---------------------- Question section --------------------------------*/
@@ -860,75 +1017,95 @@ a.top-btn {
     font-size: 18px;
 }
 
-.qst1:hover .inner-window, .inner-window.active {
-    display: block;
-    width: 469px;
-    margin-top: -70px;
-    margin-left: 125px;
+.qst1 .inner-window {
+    width: 469px;   
+    top: -30px;
+    left: 115px;
+    opacity: 0;
 }
 
-.qst2:hover .inner-window, .inner-window.active {
+.qst1:hover .inner-window, .qst1 .inner-window.active  {
     display: block;
-    left: -285px;
-    top: -140px;
+    width: 469px;   
+    top: -30px;
+    left: 115px;
+    opacity: 1;
+}
+
+.qst2 .inner-window {    
+    left: -175px;
+    top: -107px;
     width: 400px;
+    opacity: 0;
+}
+
+.qst2:hover .inner-window, .qst2 .inner-window.active  {
+    display: block;
+    left: -175px;
+    top: -107px;
+    width: 400px;
+    opacity: 1;
 }
 
 
-.qst3:hover .inner-window, .inner-window.active {
+
+.qst3 .inner-window {
+    opacity: 0;
+    width: 470px;
+    right: -10px;
+    top: 42px;
+}
+
+.qst3:hover .inner-window, .qst3 .inner-window.active {
     display: block;
     width: 470px;
-    top: 1px;
+    right: -10px;
+    top: 42px;
+    opacity: 1;
 }
 
-.qst4:hover .inner-window, .inner-window.active {
-    display: block;
-    margin-top: 10px;
+.qst4 .inner-window {
+    display: none;    
+    opacity: 0;
+    top: 25px;
+    width: 250px;
 }
 
-.qst5:hover .inner-window, .inner-window.active {
-    display: block;
-    margin-top: 10px;
+.qst4:hover .inner-window, .qst4 .inner-window.active {
+    display: block;    
+    opacity: 1;
+    top: 25px;
+    width: 250px;
+}
+
+.qst5 .inner-window {
+    display: block;    
+    opacity: 0;
+    top: 65px;
+}
+
+.qst5:hover .inner-window, .qst5 .inner-window.active {
+    display: block;    
+    opacity: 1;
+    top: 65px;
 }
 
 .inner-window {
-    display: none;
-    width: 355px;
+    display: block;
+    //width: 355px;
     background-color: #eeeded;
     color: #000;
     font-size: 11.5px;
     padding: 10px;
     font-family: RoomLight;
     line-height: 13px;
-    //position: relative;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+    position: absolute;
     top: 15px;
 }
 
-.qst5 .inner-window.active {
-    width: 352px;
-    margin-top: 10px;
-    margin-left: 0;
-}
 
-.qst3 .inner-window.active {
-    margin-top: 0px;
-    margin-left: 0;
-}
-
-.qst1 .inner-window.active {
-    margin-top: -70px;
-    margin-left: 125px;
-}
-
-.qst2 .inner-window.active {
-    margin-top: 0px;
-    width: 400px;
-    margin-left: 0;
-}
-.qst4 .inner-window.active {
-    width: 350px;
-    margin-left: 0;
-}
 
 
 .chat {
@@ -1058,7 +1235,7 @@ a.blue-btn {
 .useful {
     padding-top: 55px;
     height: 700px;
-    background: url(../img/resbg.jpg);
+    background: url(../img/resbg.jpg);    
 }
 
 .useful h2 {
@@ -1075,7 +1252,7 @@ a.blue-btn {
     float: left;
     background: url(../img/marker.png) no-repeat;
     padding-left: 85px;
-    margin-right: 30px;
+    margin-right: 25px;
     margin-left: 20px;
     height: 242px;
 }
@@ -1098,7 +1275,7 @@ a.blue-btn {
 
 .offer {
     padding-top: 59px;
-    height: 697px;
+    min-height: 697px;
     background: url(../img/formbg.jpg);
     background-size: cover;
 }

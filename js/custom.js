@@ -88,7 +88,7 @@ function allEventsStart() {
         thickness: 16,
         animation: { 
             duration: 4000
-        }               
+        }
 
     });
     $('.filled-figure').animate({height: "181px"}, 5000);
