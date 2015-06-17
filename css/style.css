@@ -457,14 +457,22 @@ a.top-btn {
 .point {
     width: 25px;
     height: 25px;    
-    position: absolute;   
-    cursor: pointer;
-    background-image: url(../img/sdot.png);
-    background-repeat: no-repeat;
-    background-position: 5px 5px;  
+    position: absolute; 
 }
 
-.point:hover {
+.round-point {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    background-image: url(../img/sdot.png);
+    background-repeat: no-repeat;
+    background-position: 5px 5px;
+}
+
+.point h3:hover + .round-point {
+    width: 25px;
+    height: 25px;
+    position: absolute;
     background-position: 2px 2px;
     background-image: url(../img/cdot.png);
 }
@@ -476,59 +484,46 @@ a.top-btn {
     width: 200px;
     text-align: left;
     text-transform: uppercase;
-    
-}
-
-.pos6:hover .hidden {
-    display: block;
-    transition: all 1s ease-in-out;
+    cursor: pointer;
 }
 
 .pos1 h3 {
     left: 10px;
-    top:3px;
+    top: 8px;
 }
-
 
 .pos2 h3 {
     top: -65px;
     left: 13px;
 }
 
-
 .pos3 h3 {
     left: 10px;
     top: 2px;
 }
-
 
 .pos4 h3 {
     left: 13px;
     top: 2px;
 }
 
-
-
 .pos5 h3 {
     top: -63px;
     left: 12px;
 }
-
 
 .pos6 h3 {
     top: 5px;
     left: 13px;
 }
 
-
 .pos7 h3 {
     left: 41px;
-    top: -20px;
+    top: -14px;
 }
 
-
 .pos8 h3 {
-    top: -48px;
+    top: -43px;
     left: 8px;
 }
 
@@ -538,10 +533,9 @@ a.top-btn {
     top: 3px;
 }
 
-
 .pos10 h3 {
     left: -81px;
-    top: -51px;
+    top: -41px;
 }
 
 .pos11 h3 {
@@ -549,12 +543,11 @@ a.top-btn {
     top: 5px;
 }
 
-
 .hidden {
     color: #fff;    
     background-color: #0088f0;   
     display: block;
-    min-width: 350px;    
+    width: 423px;
     opacity: 0;
     padding: 9px;
     position: absolute;  
@@ -562,185 +555,80 @@ a.top-btn {
     left: 10px;
     font-size: 13px;
     font-family: RoomLight;   
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
+    -webkit-transition: opacity 0.5s ease;
+    -moz-transition: opacity 0.5s ease;
+    -o-transition: opacity 0.5s ease;
 }
 
-.pos9 .hidden {
-    left: -131px;
-}
-
-.pos10 .hidden {
-    left: -202px;
+.point h3:hover ~ .hidden {
+    display: block;
+    opacity: 1;
 }
 
 .pos1 .hidden {
-    left: 200px;
+    left: 205px;
     top: 15px;
-    width: 423px;
 }
 
-.pos1:hover .hidden {
-    display: block;
-    width: 423px;
-    left: 200px;
-    top: 15px;
-    opacity: 1;
-    
+.pos2 .hidden {
+    left: -102px;
+    top: -140px;
 }
 
-.pos2 .hidden {    
-    width: 423px;
-    left: -112px;
-    top: -134px;    
-}
-
-.pos2:hover .hidden {
-    display: block;
-    width: 423px;
-    left: -112px;
-    top: -134px;
-    opacity: 1;
-}
-
-.pos3 .hidden {    
-    width: 423px;
-    left: 121px;
+.pos3 .hidden {
+    left: 116px;
     top: 35px;
 }
 
-.pos3:hover .hidden {
-    display: block;
-    width: 423px;
-    left: 121px;
-    top: 35px;
-    opacity: 1;
-}
-
-.pos4 .hidden {    
-    width: 423px;
+.pos4 .hidden {
     left: 140px;
     top: 15px;    
 }
 
-.pos4:hover .hidden {
-    display: block;
-    width: 423px;
-    left: 140px;
-    top: 15px;
-    opacity: 1;
-}
-
-
 .pos5 .hidden {  
-    width: 423px;
     left: -165px;
-    top: -130px;
-}
-
-.pos5:hover .hidden {
-    display: block;
-    width: 423px;
-    left: -165px;
-    top: -130px;
-    opacity: 1;
+    top: -138px;
 }
 
 .pos6 .hidden {
-    width: 356px;   
-}
-
-.pos6:hover .hidden {
     width: 356px;
-    display: block;   
-    opacity: 1;
 }
 
-.pos7 .hidden {  
-    width: 423px;
-    left: 42px;
-    top: 30px;   
-}
-
-.pos7:hover .hidden {
-    display: block;
-    width: 423px;
+.pos7 .hidden {
     left: 42px;
     top: 30px;
-    opacity: 1;
+    width: 350px;
 }
 
-.pos8 .hidden {    
-    width: 423px;
+.pos8 .hidden {
     left: -306px;
-    top: -114px;    
-}
-
-.pos8:hover .hidden {
-    display: block;
-    width: 423px;
-    left: -306px;
-    top: -114px;
-    opacity: 1;
+    top: -124px;    
 }
 
 .pos9 .hidden {
-    width: 423px;
     left: -163px;
-    top: 85px;
+    top: 70px;
+    width: 350px;
 }
 
-.pos9:hover .hidden {
-    display: block;
-    width: 423px;
-    left: -163px;
-    top: 85px;
-    opacity: 1;
-}
-
-.pos10 .hidden {    
-    width: 423px;
+.pos10 .hidden {
     left: -515px;
     top: -50px;    
 }
 
-.pos10:hover .hidden {
-    display: block;
-    width: 423px;
-    left: -515px;
-    top: -50px;
-    opacity: 1;
-}
-
 .pos11 .hidden {    
-    width: 423px;
     left: 180px;
     top: 25px;   
 }
 
-.pos11:hover .hidden {
-    display: block;
-    width: 423px;
-    left: 180px;
-    top: 25px;
-    opacity: 1;
-}
-
-
-
-.point:hover h3 {
+.point h3:hover {
     color: #0088f0;   
 }
-
-
-
 
 .point.pos3 {
     left: 208px;
     bottom: 131px;
 }
-
 
 .point.pos1 {
     bottom: 77px;
@@ -751,7 +639,6 @@ a.top-btn {
     bottom: 189px;
     left: 101px;
 }
-
 
 .point.pos3 {
     left: 206px;
@@ -891,7 +778,7 @@ a.top-btn {
 }
 
 .brands-wrap {
-    padding-top: 70px;
+    padding-top: 20px;
     min-height: 350px;
     overflow: hidden;
 }
@@ -911,39 +798,60 @@ a.top-btn {
 }
 
 .tab1 .brands-block {
-    width: 945px;
+    width: 775px;
     margin: 0 auto;
+}
+
+.tab5 .brands-block {
+    margin-bottom: 20px;
 }
 
 .tab5 .brands-block.br1 {
-    width: 947px;
+    width: 1030px;
     margin: 0 auto;
-    margin-bottom: 35px;
+}
+
+.tab5 .br2, .tab5 .br3 {
+    width: 775px;
+}
+
+.tab5 .br2 {
+    margin-bottom: 0px;
 }
 
 .tab2 .brands-block.br1 {
-    width: 1030px;
+    width: 775px;
     margin: 0 auto;
-    margin-bottom: 35px;
+    margin-bottom: 10px;
 }
+
+.tab2 .br2 {
+    width: 1030px;
+}
+
 .tab8 .brands-block.br1 {
-    width: 470px;
+    width: 520px;
     margin: 0 auto;
     margin-bottom: 35px;
 }
 
 .tab4 .brands-block.br1 {
-    width: 573px;
+    width: 520px;
+}
+
+.tab7 .brands-block {
+    width: 775px;
+    margin: 0 auto;
 }
 
 .tab6 .brands-block.br1 {
-    width: 665px;
+    width: 520px;
 }
 .tab9 .brands-block.br1 {
-    width: 1044px;
+    width: 775px;
 }
 .tab9 .brands-block.br2 {
-    width: 867px;
+    width: 520px;
 }
 
 .tab3 img {
@@ -953,11 +861,11 @@ a.top-btn {
 }
 
 .tab10 .brands-block {
-    width: 875px;
+    width: 520px;
 }
 
 .tab11 .brands-block {
-    width: 745px;
+    width: 520px;
 }
 
 /* ---------------------- Question section --------------------------------*/
@@ -1034,16 +942,13 @@ a.top-btn {
 
 .qst2 .inner-window {    
     left: -175px;
-    top: -107px;
+    top: -123px;
     width: 400px;
     opacity: 0;
 }
 
 .qst2:hover .inner-window, .qst2 .inner-window.active  {
     display: block;
-    left: -175px;
-    top: -107px;
-    width: 400px;
     opacity: 1;
 }
 
@@ -1067,21 +972,21 @@ a.top-btn {
 .qst4 .inner-window {
     display: none;    
     opacity: 0;
-    top: 25px;
-    width: 250px;
+    top: 40px;
+    left: -40px;
+    width: 310px;
 }
 
 .qst4:hover .inner-window, .qst4 .inner-window.active {
     display: block;    
     opacity: 1;
-    top: 25px;
-    width: 250px;
 }
 
 .qst5 .inner-window {
     display: block;    
     opacity: 0;
     top: 65px;
+    width: 370px;
 }
 
 .qst5:hover .inner-window, .qst5 .inner-window.active {
@@ -1100,12 +1005,10 @@ a.top-btn {
     font-family: RoomLight;
     line-height: 13px;
     opacity: 0;
-    transition: all 1s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
     position: absolute;
     top: 15px;
 }
-
-
 
 
 .chat {
