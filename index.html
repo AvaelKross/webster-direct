@@ -11,7 +11,6 @@
     <title>Webster</title>
    
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-    <script src="js/magic.js"></script>
     <script src="js/custom.js"></script>
     <script src="js/jquery.animateNumber.min.js"></script>
     <script src="js/circle-progress.js"></script>
@@ -573,7 +572,7 @@
                     </ol>
                 </div>
                 <div class="right-col">
-                    <form action="process.php">
+                    <form>
                         <div id="name-group" class="form-group">
                             <label for="username"></label>
                             <input type="text" id="username" name="username" placeholder="Как вас зовут">
@@ -590,7 +589,7 @@
                             <label for="useremail"></label>
                             <input type="text" id="useremail" name="useremail" placeholder="E-mail">
                         </div>                        
-                        <input type="submit" value="ПОЛУЧИТЬ">
+                        <input type="submit" id="form_button" value="ПОЛУЧИТЬ">
                     </form>
                 </div>
             </div>

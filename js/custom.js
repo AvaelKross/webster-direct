@@ -1,3 +1,49 @@
+
+function validateEmail(email) { 
+  var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(email);
+}
+var params = [];
+var query = location.search.substr(1); 
+var A = query.split("&");
+var qwe;
+for (var j=0; j<A.length; j++){ qwe = A[j].split("="); params[qwe[0]] = qwe[1]; }
+
+function send_data(){
+    name = '#username';
+    email = '#useremail';
+    phone = '#userphone';
+    business = '#userbusiness';
+    if ($(name).val().length==0) { alert("Пожалуйста, введите своё имя"); return;}
+    if ($(phone).val().length==0) { alert("Пожалуйста, введите свой номер телефона"); return;}
+    if ($(email).val().length==0) { alert("Пожалуйста, введите свой адрес электронной почты"); return;}
+    if (!validateEmail($(email).val())) { alert("Пожалуйста, введите корректный адрес электронной почты"); return;}
+    
+    var data = { 
+      name: $(name).val(),
+      email: $(email).val(),
+      phone: $(phone).val(),
+      business: $(business).val()
+    }
+
+    data['utm_content'] = params['utm_content'];
+    data['utm_campaign'] = params['utm_campaign'];
+    data['utm_source'] = params['utm_source'];
+    data['utm_term'] = params['utm_term'];
+    data['utm_medium'] = params['utm_medium'];
+
+    $.ajax({
+      type: "POST",
+      dataType: 'json',
+      url: "ajax-proxy",
+      data: data
+    })
+    .done(function( msg ) {
+        console.log(msg);
+    });
+    alert('Отправлено!')
+}
+
 $(document).ready(function(){
     //Меню с плавающим переходом
     $('a[href^="#"]').click(function () {
@@ -50,9 +96,12 @@ $(document).ready(function(){
             console.log('Started....');
             done = false;
         }                
-    });   
-   
-            
+    });
+
+    $("#form_button").on('click', function(e){
+        e.preventDefault();
+        send_data();
+    });
 });
 
 

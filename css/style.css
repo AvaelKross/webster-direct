@@ -1245,6 +1245,7 @@ input[type="submit"] {
     padding-bottom: 9px;
     text-align: center;
     width: 184px;
+    cursor: pointer;
 }
 
 /* -------------------- Footer ---------------------*/
