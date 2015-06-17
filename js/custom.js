@@ -62,12 +62,12 @@ $(document).ready(function(){
         $(selector).addClass('active');
     });
     //Событие при нажатии на вопрос
-    $('.question').click(function(){
-        if($(this).children('.inner-window').hasClass('active'))
-            $(this).children('.inner-window').removeClass('active');
-        else
-            $(this).children('.inner-window').addClass('active');               
-    });
+    // $('.question').click(function(){
+    //     if($(this).children('.inner-window').hasClass('active'))
+    //         $(this).children('.inner-window').removeClass('active');
+    //     else
+    //         $(this).children('.inner-window').addClass('active');               
+    // });
     //Стрелки
     $('.left-arrow').click(function(){
         if(($('.slide.active').prev('.slide').length))
