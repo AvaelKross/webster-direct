@@ -1200,6 +1200,26 @@ a.blue-btn {
     height: 416px;
 }
 
+.form-wrap.thanks {
+    display: none;
+    color: #000;
+    font-family: "RoomMedium";
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    font-weight: 400;
+    background-color: #fff;
+}
+
+.form-wrap.thanks h3 {
+    font-size: 18px;
+}
+
+.form-wrap.thanks img {
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
 .left-col, .right-col {
     width: 317px;
     float: left;

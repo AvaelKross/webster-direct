@@ -41,7 +41,8 @@ function send_data(){
     .done(function( msg ) {
         console.log(msg);
     });
-    alert('Отправлено!')
+    $('.form').hide();
+    $('.thanks').show();
 }
 
 $(document).ready(function(){
@@ -102,6 +103,9 @@ $(document).ready(function(){
         e.preventDefault();
         send_data();
     });
+
+    var phonemask = "+7 (999) 999-99-99";
+    $('#userphone').mask(phonemask);
 });
 
 
