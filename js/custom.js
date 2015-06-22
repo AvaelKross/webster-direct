@@ -106,6 +106,15 @@ $(document).ready(function(){
 
     var phonemask = "+7 (999) 999-99-99";
     $('#userphone').mask(phonemask);
+
+    $(".closer").on('click', function(){
+        $(".popup").css("display", "none");
+    });
+
+    $("#openPolitics").on('click', function(e){
+        $("#showPolitics").css("display", "block");
+        e.preventDefault();
+    });
 });
 
 
