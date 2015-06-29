@@ -106,7 +106,7 @@ a:hover {}
 }
 
 .menu-wrap {
-    width: 530px;
+    width: 780px;
     float: right;
     padding-top: 20px;
 }
@@ -121,6 +121,7 @@ a:hover {}
     cursor: pointer;
     color: #fff;
     text-decoration: none;
+    text-transform: uppercase;
 }
 
 .menu li a:hover {
@@ -237,6 +238,10 @@ a.top-btn {
     padding-left: 50px;
 }
 
+.result-content.final p{
+    line-height: 20px;
+}
+
 .results-wrap {
     overflow: hidden;
 }
@@ -244,6 +249,10 @@ a.top-btn {
 .info-wrap {
     overflow: hidden;
     padding-top: 61px;
+}
+
+.info-wrap.case3 {
+    padding-top: 20px;
 }
 
 .result-content h4 {
@@ -264,7 +273,7 @@ a.top-btn {
     font-family: RoomMedium;
 }
 
-.result-content.sign p span {
+.result-content.sign p a, .result-content.sign p span {
     color: #8d8d8d;
     font-size: 16px;
     font-family: RoomMedium;
@@ -942,7 +951,7 @@ a.top-btn {
 
 .qst2 .inner-window {    
     left: -175px;
-    top: -123px;
+    top: -193px;
     width: 400px;
     opacity: 0;
 }

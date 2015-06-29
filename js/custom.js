@@ -122,10 +122,18 @@ $(document).ready(function(){
 function allEventsStart() {
     console.log('All Events');
     //Настройка анимации чисел
-    $('.old-orders').animateNumber({ number: 20 },4000);
-    $('.new-orders').animateNumber({ number: 130 },4000);
-    $('.old-price').animateNumber({ number: 3270 },4000);
-    $('.new-price')
+    $('.old-orders.case1').animateNumber({ number: 20 },4000);
+    $('.old-orders.case2').animateNumber({ number: 0 },4000);
+    $('.old-orders.case3').animateNumber({ number: 312 },4000);
+    $('.old-orders.case4').animateNumber({ number: 24 },4000);
+    $('.new-orders.case1').animateNumber({ number: 130 },4000);
+    $('.new-orders.case2').animateNumber({ number: 102 },4000);
+    $('.new-orders.case3').animateNumber({ number: 870 },4000);
+    $('.new-orders.case4').animateNumber({ number: 72 },4000);
+    $('.old-price.case1').animateNumber({ number: 3270 },4000);
+    $('.old-price.case3').animateNumber({ number: 1260 },4000);
+    $('.old-price.case4').animateNumber({ number: 2269 },4000);
+    $('.new-price.case1')
         .prop('number', 3270)
         .animateNumber(
         {
@@ -135,6 +143,51 @@ function allEventsStart() {
                     rounded_now = Math.round(now);
 
                 target.text(now === tween.end ? '260' : rounded_now);
+            }
+        },
+        4000,
+        'linear'
+    );
+    $('.new-price.case2')
+        .prop('number', 9999)
+        .animateNumber(
+        {
+            number: 450,
+            numberStep: function(now, tween) {
+                var target = $(tween.elem),
+                    rounded_now = Math.round(now);
+
+                target.text(now === tween.end ? '450' : rounded_now);
+            }
+        },
+        4000,
+        'linear'
+    );
+    $('.new-price.case3')
+        .prop('number', 1260)
+        .animateNumber(
+        {
+            number: 385,
+            numberStep: function(now, tween) {
+                var target = $(tween.elem),
+                    rounded_now = Math.round(now);
+
+                target.text(now === tween.end ? '385' : rounded_now);
+            }
+        },
+        4000,
+        'linear'
+    );
+    $('.new-price.case4')
+        .prop('number', 2269)
+        .animateNumber(
+        {
+            number: 346,
+            numberStep: function(now, tween) {
+                var target = $(tween.elem),
+                    rounded_now = Math.round(now);
+
+                target.text(now === tween.end ? '346' : rounded_now);
             }
         },
         4000,
