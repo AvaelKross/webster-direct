@@ -1291,6 +1291,12 @@ input[type="submit"] {
     text-align: right;
 }
 
+.contacts a {
+    color: #fff;
+    font-size: 15.5px;
+    text-align: right;
+}
+
 .company-data li {
     font-size: 15.5px;
 }
