@@ -1359,3 +1359,9 @@ input[type="submit"] {
   padding-top: 20px;
   background-color: white !important;
 }
+
+.form_2calls_close a {
+    box-shadow: 0px 0px 3px #fff;
+    border-radius: 123123px;
+    background: rgba(255,255,255,0.3) url(http://2calls.ru/files/widgets/images/western_closer.png) no-repeat left top !important;
+}
